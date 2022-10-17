@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alquilatec</title>
     <link rel="stylesheet" href="/static/estilo.css"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/static/web.js"></script>
+    <script>
+        window.csrftoken = '{{ csrf_token }}';
+    </script>
 </head>
 <body>
     <div id="caja">
@@ -15,11 +20,10 @@
         <aside>
             <h2>¡Hola! para seguir, ingresa tu e-mail o usuario</h2>
             <h5>E-mail o usuario</h5>
-            <form id="login">
-                <a href="/principal">
-                    <input type="text">
-                    <input type="button" value="Continuar">
-                </a>
+            <form>
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Contraseña">
+                <button onclick="login(event)">Acceder</button>
             </form>
         </aside>
         <div>

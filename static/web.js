@@ -34,3 +34,28 @@ async function registro(event){
         alert('No se ha podido crear el usuario')
     }
 }
+
+async function login(event){
+    event.preventDefault()
+    const email = document.querySelector('#email').value.trim()
+    const password = document.querySelector('#password').value.trim()
+    if (!email) {
+        return alert('Debes escribir email valido')
+    }
+    if (!password) {
+        return alert('Debes escribir una contraseña')
+    }
+    try{
+        await axios.post('/login', {
+            email: email,
+            password: password,
+        }, {
+            headers: {
+                'X-CSRFToken': window.csrftoken
+            }
+        });
+        location.href = '/principal'
+    } catch(e){
+        alert('Usuario o contraseña incorrecta')
+    }
+}

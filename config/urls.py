@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from alquilatec.views import index, equipos, principal, contacto, \
-        registro, guardar_usuario
+        registro, guardar_usuario, acceder, salir
 
 
 urlpatterns = [
@@ -26,5 +26,7 @@ urlpatterns = [
     path('principal', principal),
     path('registro', registro),
     path('guardar-usuario', guardar_usuario),
+    path('login', acceder),
+    path('logout', salir),
     path('admin/', admin.site.urls),
 ]

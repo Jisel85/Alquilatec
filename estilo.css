@@ -1,0 +1,353 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+    }
+
+body{
+    margin-bottom: 40px;
+    }
+      
+
+
+#caja{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    text-align: center;
+
+}
+
+header{
+    background-color: yellow;
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    text-align: center; 
+    line-height: 80px;
+    border-bottom: 3px;
+}
+
+#menu{
+    display: flex;
+    height: 100px;
+    background: yellow;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    float: left;
+    justify-content: space-around;
+}
+
+nav ul {
+    overflow: hidden; 
+  }
+
+nav ul li{
+    list-style: none;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 200px;
+}
+
+nav ul li a {
+    display: block; 
+    padding: 0px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background: grey;
+}
+
+
+#banner{
+    height: 70%;
+    width: 70%;
+    float: left;
+    justify-content: space-around;
+    padding-left: 200px;
+}
+
+.w3_search{
+    color: blue;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.w3_search input {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 800px;
+    height: 50px;
+  }
+
+  #container{
+    height: 100px;
+    background: #FAF3E3;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    float: left;
+    line-height: 80px;
+    padding-left: 0px;
+    line-height: 30px;
+    padding-right: 0px;
+}
+
+
+#container input{
+width: 100px;
+}
+
+
+/* Importación de fuentes de google fonts */ 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+#login{  
+    width: 460px; 
+    height: auto;
+    margin: 40px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+  }
+
+
+input{
+  background-color: #fbfbfb; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: black; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: #fbfbfb; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: black; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: yellow; 
+  border-color: black; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+}
+
+
+button p{
+  color: black; 
+}
+
+
+span{
+  color: black; 
+}
+
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+
+h1{
+  font-size: 39px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: black;
+}
+
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e;   
+}
+
+
+p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid yellow;
+}
+
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1px solid yellow;
+}
+
+
+.footer {
+    background-color:#0D0F49;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10%;
+  }
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+  
+  .footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+div {
+    display: block;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+    display: table;
+}
+
+.small{
+    width: 100%;
+}
+
+
+.product{
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.product-image {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.large-12{
+    width: 100%;
+}
+
+
+.large-3{
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+
+.column, .columns {
+    position: relative; 
+    padding-left: 0.9375rem; 
+    padding-right: 0.9375rem; 
+    float: left; 
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.info{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.price{
+    color: #000;
+    font-weight: bold;
+    font-size: 0.95rem;
+}

@@ -351,3 +351,7 @@ img {
     font-weight: bold;
     font-size: 0.95rem;
 }
+
+#equipos input{
+  width: 50px!important;
+}

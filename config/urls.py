@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from alquilatec.views import index, equipos, principal, contacto, \
-        registro, guardar_usuario, acceder, salir
+        registro, guardar_usuario, acceder, salir, \
+        consultar_equipos, alquilar
 
 
 urlpatterns = [
     path('', index),
     path('equipos', equipos),
+    path('alquilar', alquilar),
+    path('consultar-equipos', consultar_equipos),
     path('contacto', contacto),
     path('principal', principal),
     path('registro', registro),

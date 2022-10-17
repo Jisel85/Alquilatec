@@ -4,7 +4,8 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
+from alquilatec.models import Equipo, Alquiler, EquipoAlquiler
+from dateutil import parser
 
 def index(request):
     context = {}
@@ -56,3 +57,36 @@ def acceder(request):
 def salir(request):
     logout(request)
     return redirect('/')
+
+@login_required(login_url='/')
+def consultar_equipos(request):
+    equipos = Equipo.objects.filter(active=True)
+    return JsonResponse({
+        'status':'ok',
+        'equipos': list(map(
+            lambda equipo: {
+                'id': equipo.id,
+                'nombre': equipo.nombre,
+                'precio': equipo.precio,
+                'url': equipo.url,
+            }, 
+            equipos
+        ))
+    })
+
+@login_required(login_url='/')
+def alquilar(request):
+    data = json.loads(request.body)
+    alquiler = Alquiler.objects.create(
+        usuario=request.user,
+        direccion=data['direccion'],
+        inicia=parser.parse(data['inicio']),
+        termina=parser.parse(data['fin']),
+    )
+    for id_equipo, numero in data['alquilar'].items():
+        EquipoAlquiler.objects.create(
+            equipo_id=id_equipo,
+            alquiler=alquiler,
+            numero=numero,
+        )
+    return JsonResponse({'status':'ok'})

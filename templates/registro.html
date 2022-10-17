@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alquilatec</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="/static/estilo.css"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/static/web.js"></script>
+    <script>
+        window.csrftoken = '{{ csrf_token }}';
+    </script>
 </head>
 <body>
     <div id="caja">
         <header>
-            <h1>Alquilatec </h1>
+            <h1>Registro </h1>
         </header>
         <aside>
             <h2>¡Hola! para seguir, ingresa tu e-mail o usuario</h2>
             <h5>E-mail o usuario</h5>
-            <form id="login">
-                <a href="/principal">
-                    <input type="text">
-                    <input type="button" value="Continuar">
-                </a>
+            <form>
+                <input id="name" type="text" placeholder="Nombre">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Contraseña">
+                <button onclick="registro(event)">Crear cuenta</button>
             </form>
         </aside>
         <div>
-            <a href="/registro">Crear cuenta</a>  <br />
+            <a href="/">Iniciar sesión</a>  <br />
         </div>
         <footer class="footer">
             <text>
